@@ -1,43 +1,44 @@
 [workspace]
-members=["crates/*", "benchmarks", "scripts"]
-default-members=[".", "crates/tinywasm", "crates/types", "crates/parser"]
-resolver="2"
+members = ["crates/*", "benchmarks", "scripts"]
+default-members = [".", "crates/tinywasm", "crates/types", "crates/parser"]
+resolver = "2"
 
 [profile.wasm]
-opt-level="s"
-lto="thin"
-codegen-units=1
-panic="abort"
-inherits="release"
+opt-level = "s"
+lto = "thin"
+codegen-units = 1
+panic = "abort"
+inherits = "release"
 
 [workspace.package]
-version="0.7.0"
-edition="2021"
-license="MIT OR Apache-2.0"
-authors=["Henry Gressmann <mail@henrygressmann.de>"]
-repository="https://github.com/explodingcamera/tinywasm"
+version = "0.7.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["Henry Gressmann <mail@henrygressmann.de>"]
+repository = "https://github.com/explodingcamera/tinywasm"
 
 [package]
-name="tinywasm-root"
-publish=false
-edition="2021"
+name = "tinywasm-root"
+publish = false
+edition = "2021"
+version = "0.7.0"
 
 [[example]]
-name="wasm-rust"
-test=false
+name = "wasm-rust"
+test = false
 
 [dev-dependencies]
-color-eyre="0.6"
-tinywasm={path="crates/tinywasm"}
-wat={version="1"}
-pretty_env_logger="0.5"
+color-eyre = "0.6"
+tinywasm = { path = "crates/tinywasm" }
+wat = { version = "1" }
+pretty_env_logger = "0.5"
 
 [profile.bench]
-opt-level=3
-lto="thin"
-codegen-units=1
-debug=true
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+debug = true
 
 [patch.crates-io]
 # https://github.com/servo/pathfinder/pull/548 & https://github.com/servo/pathfinder/issues/558
-pathfinder_simd={git="https://github.com/servo/pathfinder", rev="30419d07660dc11a21e42ef4a7fa329600cff152"}
+pathfinder_simd = { git = "https://github.com/servo/pathfinder", rev = "30419d07660dc11a21e42ef4a7fa329600cff152" }
