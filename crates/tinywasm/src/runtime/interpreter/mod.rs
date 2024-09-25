@@ -352,7 +352,8 @@ impl InterpreterRuntime {
     #[inline(always)]
     fn exec_i32_local_get_const_add(&self, local: u32, val: i32, stack: &mut Stack, cf: &CallFrame) {
         let local: i32 = cf.get_local(local).into();
-        stack.values.push((local + val).into());
+        let result = local.wrapping_add(val);
+        stack.values.push((result).into());
     }
 
     #[inline(always)]

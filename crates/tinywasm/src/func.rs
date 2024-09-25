@@ -265,6 +265,9 @@ impl_val_types_from_tuple!(T1, T2, T3);
 impl_val_types_from_tuple!(T1, T2, T3, T4);
 impl_val_types_from_tuple!(T1, T2, T3, T4, T5);
 impl_val_types_from_tuple!(T1, T2, T3, T4, T5, T6);
+impl_val_types_from_tuple!(T1, T2, T3, T4, T5, T6, T7);
+impl_val_types_from_tuple!(T1, T2, T3, T4, T5, T6, T7, T8);
+impl_val_types_from_tuple!(T1, T2, T3, T4, T5, T6, T7, T8, T9);
 
 impl_from_wasm_value_tuple!();
 impl_from_wasm_value_tuple!(T1);
@@ -273,6 +276,9 @@ impl_from_wasm_value_tuple!(T1, T2, T3);
 impl_from_wasm_value_tuple!(T1, T2, T3, T4);
 impl_from_wasm_value_tuple!(T1, T2, T3, T4, T5);
 impl_from_wasm_value_tuple!(T1, T2, T3, T4, T5, T6);
+impl_from_wasm_value_tuple!(T1, T2, T3, T4, T5, T6, T7);
+impl_from_wasm_value_tuple!(T1, T2, T3, T4, T5, T6, T7, T8);
+impl_from_wasm_value_tuple!(T1, T2, T3, T4, T5, T6, T7, T8, T9);
 
 impl_into_wasm_value_tuple!();
 impl_into_wasm_value_tuple!(T1);
@@ -281,3 +287,6 @@ impl_into_wasm_value_tuple!(T1, T2, T3);
 impl_into_wasm_value_tuple!(T1, T2, T3, T4);
 impl_into_wasm_value_tuple!(T1, T2, T3, T4, T5);
 impl_into_wasm_value_tuple!(T1, T2, T3, T4, T5, T6);
+impl_into_wasm_value_tuple!(T1, T2, T3, T4, T5, T6, T7);
+impl_into_wasm_value_tuple!(T1, T2, T3, T4, T5, T6, T7, T8);
+impl_into_wasm_value_tuple!(T1, T2, T3, T4, T5, T6, T7, T8, T9);
